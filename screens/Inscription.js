@@ -183,7 +183,7 @@ const [userToBeCreated, setUserToBeCreated] = useState({
                 <TouchableOpacity 
                 onPress={() => GoToLogin()}
                 style={{flex : 0.28  , justifyContent: 'center'}}>
-                    <Text style={{color: '#737AFA' ,fontSize: 18 , fontWeight: 'bold'}}>Connexion</Text>
+                    <Text style={{color: '#737AFA' ,fontSize: 20 , fontWeight: 'bold' ,alignSelf: 'flex-end' , marginRight: 5}}>Login</Text>
                 </TouchableOpacity>
                 </View>
                
@@ -199,7 +199,7 @@ const [userToBeCreated, setUserToBeCreated] = useState({
                     </View>
                     <View style={{flex : 0.8}}>
                 <TextInput
-                                                placeholder="Votre Nom"
+                                                placeholder="Enter username"
 
       onChangeText={(username) => {handleChangeUserName(username)}}
      // value={value}
@@ -212,7 +212,7 @@ const [userToBeCreated, setUserToBeCreated] = useState({
                     userToBeCreated.username.length == 0 && emptyusername ==true?
 
                                             <View style={{justifyContent: 'center' , alignSelf: 'center'}}>
-            <Text style={{fontSize: 14 , fontWeight: 'bold' , color: '#EBB401'}}>Champ du nom est vide</Text>
+            <Text style={{fontSize: 14 , fontWeight: 'bold' , color: '#EBB401'}}>Field is empty</Text>
                         </View>
                     : null
                 }
@@ -230,7 +230,7 @@ const [userToBeCreated, setUserToBeCreated] = useState({
                     </View>
                     <View style={{flex : 0.8}}>
                 <TextInput
-                            placeholder="Entrer Votre Email"
+                            placeholder="Enter your email"
 
       onChangeText={(email) => {handleEmailChange(email)}}
      // value={value}
@@ -244,7 +244,7 @@ const [userToBeCreated, setUserToBeCreated] = useState({
                     ?
 
                                             <View style={{justifyContent: 'center' , alignSelf: 'center'}}>
-            <Text style={{fontSize: 14 , fontWeight: 'bold' , color: '#EBB401'}}>Champ email est vide ou pas format email</Text>
+            <Text style={{fontSize: 14 , fontWeight: 'bold' , color: '#EBB401'}}>Email field empty or not correct format of email</Text>
                         </View>
                     : null
                 }
@@ -260,7 +260,7 @@ const [userToBeCreated, setUserToBeCreated] = useState({
                     </View>
                     <View style={{flex : 0.8}}>
                 <TextInput
-            placeholder="Votre Mot de Passe"
+            placeholder="Enter your password"
             secureTextEntry={true}
       onChangeText={(password) => {handlePasswordChange(password)}}
      // value={value}
@@ -273,7 +273,7 @@ const [userToBeCreated, setUserToBeCreated] = useState({
                     userToBeCreated.password.length == 0 && emptypassword == true?
 
                                             <View style={{justifyContent: 'center' , alignSelf: 'center'}}>
-            <Text style={{fontSize: 14 , fontWeight: 'bold' , color: '#EBB401'}}>Champ password est vide</Text>
+            <Text style={{fontSize: 14 , fontWeight: 'bold' , color: '#EBB401'}}>Empty Password Field</Text>
                         </View>
                     : null
                 }
@@ -284,24 +284,24 @@ const [userToBeCreated, setUserToBeCreated] = useState({
                 <TouchableOpacity 
                 onPress={() => handleCreateUser()}
                 style={{flex : 0.8 , backgroundColor: '#C6C1C1' ,borderRadius: 25, alignSelf: 'center' , alignContent: 'center' , alignItems: 'center' , justifyContent: 'center' , padding: 14}}>
-                <Text style={{fontSize: 30 , color: '#fff' , fontWeight: 'bold'}}>Inscription</Text>
+                <Text style={{fontSize: 30 , color: '#fff' , fontWeight: 'bold'}}>Sign Up</Text>
                 </TouchableOpacity>
                 </View>
 
 {
     signuperror == true ?
-                <View style={{alignSelf: 'center' , flexDirection: 'row' , marginTop: 30 , borderWidth: 1 , borderRadius: 20 , padding: 10 , borderColor: 'red'}}>
+                <View style={{width: '80%',alignSelf: 'center' , flexDirection: 'row' , marginTop: 30 , borderWidth: 1 , borderRadius: 20 , padding: 10 , borderColor: 'red'}}>
                 <MaterialIcons name="error" size={35} color='red' />
-                <Text style={{alignSelf: 'center' , fontSize: 16}}>Email ou Username deja existe</Text>
+                <Text style={{alignSelf: 'center' }}>Email or username already exist</Text>
 
                 </View> :
                 null
 }
 {
     signupsuccess == true ?
-                <View style={{alignSelf: 'center' , flexDirection: 'row' , marginTop: 30 , borderWidth: 1 , borderRadius: 20 , padding: 10 , borderColor: 'green'}}>
+                <View style={{width: '80%',alignSelf: 'center' , flexDirection: 'row' , marginTop: 30 , borderWidth: 1 , borderRadius: 20 , padding: 10 , borderColor: 'green'}}>
                 <AntDesign name="checkcircleo" size={35} color='green' />
-                <Text style={{alignSelf: 'center' , fontSize: 16}}> le compte a eté creer </Text>
+                <Text style={{alignSelf: 'center' }}> Account Successfuly Created</Text>
 
                 </View> :
                 null

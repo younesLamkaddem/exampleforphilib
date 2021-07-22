@@ -40,7 +40,7 @@ const Dashboard = props => {
     }
 
     const goToSplashScreen = () => {
-        props.navigation.navigate('SplashScreen')
+       // props.navigation.navigate('SplashScreen')
     }
 
     return (
@@ -54,7 +54,7 @@ const Dashboard = props => {
             <View style={styles.viewTwo}>
                 <View style={{flex : 0.5 }}>
                   <View style={{alignItems: 'center' , marginTop: 45 }}>
-                    <Text style={{ fontSize: 20 , color: '#716E6E' , fontWeight: 'bold'}}>Continuer avec</Text>
+                    <Text style={{ fontSize: 20 , color: '#716E6E' , fontWeight: 'bold'}}>Continue With</Text>
                 </View>
                 <TouchableOpacity 
                 onPress={() => goToSplashScreen()}
@@ -75,16 +75,16 @@ const Dashboard = props => {
                     <TouchableOpacity style={{alignItems: 'center'}} 
                     onPress={() => goToInscriptionPage()}
                     >
-                        <Text style={{fontWeight: 'bold' , fontSize: 23 , color: '#737AFA'}}>Inscription</Text>
+                        <Text style={{fontWeight: 'bold' , fontSize: 23 , color: '#737AFA'}}>Sign Up</Text>
                     </TouchableOpacity>
 
                     <View style={{flexDirection: 'row' , marginTop: 30 , alignContent: 'center' , alignItems: 'center' , alignSelf: 'center'}}>
                     <View>
-                        <Text>Vous avez déja un compte ?</Text>
+                        <Text>Already Have an account ?</Text>
                     </View>
                                         <TouchableOpacity style={{alignItems: 'center'}} 
                     >
-                        <Text style={{color: '#737AFA' ,fontWeight: 'bold' , fontSize: 17}}> Connexion</Text>
+                        <Text style={{color: '#737AFA' ,fontWeight: 'bold' , fontSize: 17}}> Login</Text>
                     </TouchableOpacity>   
                     </View>
                 </View>
@@ -92,7 +92,7 @@ const Dashboard = props => {
                 <View style={{flex: 0.2 }}>
                     <View style={{alignSelf: 'center' , flexDirection: 'row'}}>
                     <Text style={{color: '#716E6E'}}>
-                    En continuant , vous acceptez nos 
+                    By continuing you accept our 
                     </Text> 
                     <Text style={[styles.underline,{
                         color: '#716E6E' , fontSize: 14
@@ -101,12 +101,12 @@ const Dashboard = props => {
                     <View style={{alignSelf: 'center' , flexDirection: 'row'}}>
                    <Text style={[styles.underline,{
                         color: '#716E6E' , fontSize: 14
-                    }]}> d'utilisation</Text>
-                    <Text style={{color: '#716E6E'}}> et notre</Text>
+                    }]}> of use</Text>
+                    <Text style={{color: '#716E6E'}}> and our</Text>
                     <Text style={[styles.underline,{
                                                 color: '#716E6E' , fontSize: 14
 
-                    }]}> Politique de confidentialité</Text>
+                    }]}> Privacy Policy</Text>
                     </View>
                 </View>
 
